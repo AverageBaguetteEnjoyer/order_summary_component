@@ -22,8 +22,8 @@ Users should be able to:
 
 ## Links
 
-- Solution URL: 
-- Live Site URL: 
+- Solution URL: https://www.frontendmentor.io/solutions/order-summary-component-OoKha2h1dK
+- Live Site URL: https://ordersummarycomponent-abe.netlify.app
 
 ## Author
 
