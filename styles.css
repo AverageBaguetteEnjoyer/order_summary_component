@@ -2,7 +2,6 @@
     --bg-body: oklch(93.191% 0.03248 270.463);
     --bg-card: oklch(100% 0.00011 271.152);
     --bg-plan: oklch(98.231% 0.00837 271.335);
-    --bg-plan-icon: oklch(91.079% 0.04286 269.563);
     --bg-proceed-btn: oklch(45.689% 0.25568 272.998);
     --bg-proceed-btn-hover: oklch(60.939% 0.19318 282.426);
     --clr-font-primary: oklch(30.987% 0.07307 266.385);
@@ -97,15 +96,6 @@ main {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-.card__plan-icon {
-    width: 3rem;
-    aspect-ratio: 1;
-    background: var(--bg-plan-icon);
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
 }
 
 .card__plan-description span {
