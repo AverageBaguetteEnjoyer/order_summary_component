@@ -1,0 +1,204 @@
+:root {
+    --bg-body: oklch(93.191% 0.03248 270.463);
+    --bg-card: oklch(100% 0.00011 271.152);
+    --bg-plan: oklch(98.231% 0.00837 271.335);
+    --bg-plan-icon: oklch(91.079% 0.04286 269.563);
+    --bg-proceed-btn: oklch(45.689% 0.25568 272.998);
+    --bg-proceed-btn-hover: oklch(60.939% 0.19318 282.426);
+    --clr-font-primary: oklch(30.987% 0.07307 266.385);
+    --clr-font-secondary: oklch(60.001% 0.06205 269.183);
+    --clr-font-third: oklch(100% 0.00011 271.152);
+    --clr-link: oklch(45.689% 0.25568 272.998);
+    --clr-link-hover: oklch(60.939% 0.19318 282.426);
+    --clr-outline-focus: oklch(45.689% 0.25568 272.998);
+    --box-shadow-card: 0 2.5rem 2.5rem -1.25rem oklch(40.693% 0.21918 264.991 / 0.15);
+    --box-shadow-proceed-btn: 0 1.25rem 1.25rem 0 oklch(45.689% 0.25568 272.998 / 0.19);
+    --font-family: "Red Hat Display", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("./images/pattern-background-desktop.svg") repeat-x top var(--bg-body);
+    font-family: var(--font-family);
+}
+
+:is(a, button):focus-visible {
+    outline: 2px solid var(--clr-outline-focus);
+    outline-offset: .25rem;
+}
+
+main {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    width: min(calc(100% - 3rem), 28.125rem);
+    background: var(--bg-card);
+    color: var(--clr-font-primary);
+    border-radius: 20px;
+    font-weight: 500;
+    line-height: 1.65;
+    overflow: hidden;
+    box-shadow: var(--box-shadow-card);
+}
+
+.card__illustration {
+    height: 13.75rem;
+}
+
+.card__illustration img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__main {
+    padding: 3rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.card__main header {
+    text-align: center;
+    display: grid;
+    gap: 1rem;
+}
+
+.card__main header h1 {
+    font-size: 1.75rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    line-height: 1.35;
+}
+
+.card__main header p {
+    color: var(--clr-font-secondary);
+}
+
+.card__plan {
+    background: var(--bg-plan);
+    padding: 1.5rem;
+    border-radius: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__plan-details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card__plan-icon {
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.card__plan-description span {
+    display: block;
+}
+
+.card__plan-type {
+    text-transform: capitalize;
+    font-weight: 900;
+}
+
+.card__plan-price {
+    color: var(--clr-font-secondary);
+}
+
+.card__plan-change {
+    color: var(--clr-link);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.card__plan-change:is(:hover, :focus-visible) {
+    color: var(--clr-link-hover);
+}
+
+.card__actions {
+    margin-top: 1rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.card__actions button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.card__proceed-button {
+    padding: .9063rem;
+    background: var(--bg-proceed-btn);
+    color: var(--clr-font-third);
+    border-radius: 11px;
+    box-shadow: var(--box-shadow-proceed-btn);
+}
+
+.card__proceed-button:is(:hover, :focus-visible) {
+    background: var(--bg-proceed-btn-hover);
+}
+
+.card__cancel-button {
+    padding: .1563rem .9063rem;
+    color: var(--clr-font-secondary);
+    background: none;
+    text-transform: capitalize;
+}
+
+.card__cancel-button:is(:hover, :focus-visible) {
+    color: var(--clr-font-primary);
+}
+
+@media (max-width: 25rem) {
+    body {
+        background: url("./images/pattern-background-mobile.svg") repeat-x top var(--bg-body);
+    }
+
+    .card {
+        font-size: .9375rem;
+    }
+
+    .card__main {
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .card__main header h1 {
+        font-size: 1.375rem;
+    }
+
+    .card__illustration {
+        height: 10rem;
+    }
+
+    .card__plan {
+        padding: 1rem;
+    }
+
+    .card__actions {
+        gap: 1.5rem;
+        margin-top: 0;
+    }
+
+    .card__actions button {
+        font-size: .9375rem;
+    }
+}
