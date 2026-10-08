@@ -102,6 +102,7 @@ main {
 .card__plan-icon {
     width: 3rem;
     aspect-ratio: 1;
+    background: var(--bg-plan-icon);
     border-radius: 50%;
     display: grid;
     place-items: center;
